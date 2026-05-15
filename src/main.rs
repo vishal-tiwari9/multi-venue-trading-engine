@@ -4,10 +4,13 @@ mod  types;
 use tracing::info;
 use crate::config::load_config;
 use crate::tracing::init_tracing;
+use crate::metrics::register_metrics;
 
 
 fn main()->Result<(),Box<dyn std::error::Error>>{
     
+   info!("Adding Prometheus Metrics");
+
     init_tracing();
     info!("Application starting...");
     tracing_subscriber::fmt::init();

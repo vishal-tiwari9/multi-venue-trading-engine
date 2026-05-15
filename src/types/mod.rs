@@ -1,10 +1,11 @@
-pub type Price:f64;
-pub type Quantity :f64;
-pub type Timestamp:u64;
+pub type Price= f64;
+pub type Quantity = f64  ;
+
+pub type Timestamp = u64;
+pub type ExchangeName = String;
 
 #[derive(Debug,Clone, PartialEq,Eq, PartialOrd,Ord,Hash)]
-
-struct OrderBookLevel{
+pub struct OrderBookLevel{
     pub price:Price,
     pub quantity:Quantity,
 
@@ -17,10 +18,11 @@ pub enum Side{
 }
 
 #[derive(Debug,Clone)]
-pub enum Trade{
+pub struct Trade {
     pub price:Price,
     pub quantity:Quantity,
     pub side:Side,
     pub timestamp:Timstamp,
+    pub exchange:ExchangeName,
 
 }
