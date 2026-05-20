@@ -14,7 +14,7 @@ pub fn init_metrics() ->&'static Registry{
 pub static MESSAGE_RECIEVED:OnceLock<IntCounter>=OnceLock::new();
 pub static ORDERBOOK_UPDAT_LATENCY:OnceLock,Histogram>=OnceLock::new();
 pub static ACTIVE_WEBSOCKETS:OnceLock<Gauge>=OnceLock::new();
-(
+
 pub fn register_metrics(){
     let regsitry = init_metrics();
     let mesaages =IntCounter::new("messages_REceived_total","Total messages received from exchanges")

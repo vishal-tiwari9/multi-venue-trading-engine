@@ -1,4 +1,4 @@
-use crate::error:TradingError;
+use crate::error::TradingError;
 use config::{Config,File};
 use serde::Deserialize;
 

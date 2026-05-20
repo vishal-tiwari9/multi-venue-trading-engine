@@ -2,7 +2,7 @@ use thiserror::Error;
 
 #[derive(Error,Debug)]
 pub enum TradingError{
-    #[error("Exchange Errir :{0}")]
+    #[error("Exchange error:{0}")]
     Exchange(String),
 
  #[error("Websocket error:{0}")]
